@@ -47,6 +47,11 @@ public class Beverage extends Product {
 
         return getSellingPrice();
     }
+    
+    @Override
+    public float calculateFinalPrice() {
+        return (float) calculatePriceBySize();
+    }
 
     public float calculatePreparationCost() {
         return getCost();
