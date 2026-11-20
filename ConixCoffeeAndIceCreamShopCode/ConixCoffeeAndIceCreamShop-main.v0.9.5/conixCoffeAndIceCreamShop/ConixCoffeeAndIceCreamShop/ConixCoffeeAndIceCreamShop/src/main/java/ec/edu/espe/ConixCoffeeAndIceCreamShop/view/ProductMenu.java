@@ -152,7 +152,7 @@ public class ProductMenu {
                     "ID: %d | Name: %s | Price: $%.2f | Cost: $%.2f%n",
                     product.getId(),
                     product.getName(),
-                    product.getSellingPrice(),
+                    product.calculateFinalPrice(),
                     product.getCost()
             );
         }
