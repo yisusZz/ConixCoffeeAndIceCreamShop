@@ -60,4 +60,10 @@ public class IceCream extends Product {
     public double calculatePriceWithExtras() {
         return calculatePriceByPortions() + extrasCost;
     }
+    
+    @Override
+    public float calculateFinalPrice() {
+        return (float) calculatePriceWithExtras();
+    }
+    
 }
