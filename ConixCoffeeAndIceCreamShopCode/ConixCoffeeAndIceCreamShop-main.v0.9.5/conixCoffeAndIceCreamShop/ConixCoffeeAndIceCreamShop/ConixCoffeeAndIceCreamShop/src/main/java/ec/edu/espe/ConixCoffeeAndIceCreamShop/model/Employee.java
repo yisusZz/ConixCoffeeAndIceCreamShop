@@ -1,6 +1,6 @@
 package ec.edu.espe.ConixCoffeeAndIceCreamShop.model;
 
-public class Employee {
+public class Employee implements Authenticatable {
 
     private String username;
     private String password;
@@ -11,7 +11,7 @@ public class Employee {
         setPassword(password);
         this.isClockedIn = isClockedIn;
     }
-
+    @Override
     public boolean login(String inputUser, String inputPassword) {
         if (inputUser == null || inputPassword == null) {
             return false;

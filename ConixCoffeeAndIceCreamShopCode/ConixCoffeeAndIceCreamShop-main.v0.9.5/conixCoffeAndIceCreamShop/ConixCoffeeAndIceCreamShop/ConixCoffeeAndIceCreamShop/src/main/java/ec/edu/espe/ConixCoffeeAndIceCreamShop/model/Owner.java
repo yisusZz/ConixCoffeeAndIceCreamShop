@@ -1,7 +1,7 @@
 
 package ec.edu.espe.ConixCoffeeAndIceCreamShop.model;
 
-public class Owner {
+public class Owner implements Authenticatable {
 
     private String username;
     private String password;
@@ -11,6 +11,7 @@ public class Owner {
         setPassword(password);
     }
 
+    @Override
     public boolean login(String inputUser, String inputPassword) {
         if (inputUser == null || inputPassword == null) {
             return false;

@@ -31,6 +31,7 @@ ec\edu\espe\ConixCoffeeAndIceCreamShop\persistence\CustomerJsonManager.class
 ec\edu\espe\ConixCoffeeAndIceCreamShop\persistence\ShiftJsonManager$1.class
 ec\edu\espe\ConixCoffeeAndIceCreamShop\persistence\CustomerJsonManager$1.class
 ec\edu\espe\ConixCoffeeAndIceCreamShop\model\Packaging.class
+ec\edu\espe\ConixCoffeeAndIceCreamShop\model\Authenticatable.class
 ec\edu\espe\ConixCoffeeAndIceCreamShop\persistence\ShiftJsonManager$ShiftData.class
 products\csv.class
 ec\edu\espe\ConixCoffeeAndIceCreamShop\view\ShiftMenu.class

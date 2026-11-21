@@ -9,6 +9,9 @@ import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Product;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Promotion;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Shift;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Tax;
+import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Authenticatable;
+import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Owner;
+
 
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.persistence.CustomerJsonManager;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.persistence.EmployeeJsonManager;
@@ -21,6 +24,7 @@ import ec.edu.espe.ConixCoffeeAndIceCreamShop.persistence.ShiftJsonManager;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.persistence.TaxJsonManager;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.persistence.ProductReportManager;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.persistence.CustomerReportManager;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -58,10 +62,42 @@ public class MainMenu {
     private EmployeeMenu employeeMenu;
     private ShiftMenu shiftMenu;
     private TaxPackagingMenu taxPackagingMenu;
+    
+    
+    private void testAuthenticatable() {
+
+        System.out.println("\n===== INTERFACE TEST =====");
+
+        // Employee implements Authenticatable
+        Authenticatable employee =
+                new Employee("employee", "1234", false);
+
+        // Owner implements Authenticatable
+        Authenticatable owner =
+                new Owner("owner", "5678");
+
+        System.out.println("\nTesting Employee:");
+        System.out.println("Correct credentials: "
+                + employee.login("employee", "1234"));
+        System.out.println("Incorrect credentials: "
+                + employee.login("employee", "wrong"));
+
+        System.out.println("\nTesting Owner:");
+        System.out.println("Correct credentials: "
+                + owner.login("owner", "5678"));
+        System.out.println("Incorrect credentials: "
+                + owner.login("owner", "wrong"));
+
+        System.out.println("==========================");
+    }
+
 
     public static void main(String[] args) {
-        MainMenu menu = new MainMenu();
-        menu.start();
+    MainMenu menu = new MainMenu();
+
+    menu.testAuthenticatable();
+
+    menu.start();
     }
 
     public void start() {
