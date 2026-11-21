@@ -7,6 +7,8 @@ package com.mycompany.conixcoffeeandicecreamshop;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Beverage;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.IceCream;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Product;
+import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.OtherProduct;
+
 import java.util.ArrayList;
 
 /**
@@ -32,9 +34,10 @@ public class ConixCoffeeAndIceCreamShop {
         menuList.add(new Beverage('M', false, 10, "Milkshake de Chocolate", 3.50f, 1.40f));
         menuList.add(new Beverage('S', true, 11, "Té Caliente de Manzanilla", 1.50f, 0.40f));
         
-        menuList.add(new Product(12, "Topping de Chips de Chocolate", 0.50f, 0.15f));
-        menuList.add(new Product(13, "Salsa Extra de Chocolate", 0.40f, 0.10f));
-        menuList.add(new Product(14, "Cono de Galleta Extra", 0.60f, 0.20f));
+        menuList.add(new OtherProduct(12, "Topping de Chips de Chocolate", 0.50f, 0.15f));
+        menuList.add(new OtherProduct(13, "Salsa Extra de Chocolate", 0.40f, 0.10f));
+        menuList.add(new OtherProduct(14, "Cono de Galleta Extra", 0.60f, 0.20f));
+        
       
     }
 }

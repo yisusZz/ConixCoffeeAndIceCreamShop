@@ -14,6 +14,7 @@ ec\edu\espe\ConixCoffeeAndIceCreamShop\view\MainMenu.class
 ec\edu\espe\ConixCoffeeAndIceCreamShop\view\TaxPackagingMenu.class
 ec\edu\espe\ConixCoffeeAndIceCreamShop\view\PromotionMenu.class
 ec\edu\espe\ConixCoffeeAndIceCreamShop\model\Employee.class
+ec\edu\espe\ConixCoffeeAndIceCreamShop\model\OtherProduct.class
 ec\edu\espe\ConixCoffeeAndIceCreamShop\model\Promotion.class
 ec\edu\espe\ConixCoffeeAndIceCreamShop\persistence\PromotionJsonManager$PromotionData.class
 ec\edu\espe\ConixCoffeeAndIceCreamShop\model\Tax.class

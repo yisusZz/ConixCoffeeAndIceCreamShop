@@ -12,6 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.OtherProduct;
 
 /**
  *
@@ -176,7 +177,7 @@ public class OrderDetailTest {
     @Test
     public void testCalculateSubtotal() {
         System.out.println("calculateSubtotal");
-        Product product = new Product(1, "Helado de Mora", 2.50f, 1.05f);
+        Product product = new OtherProduct(1, "Helado de Mora", 2.50f, 1.05f);
         OrderDetail instance = new OrderDetail(product, 3, 0.0f);
         float expResult = 7.50f;
         float result = (float) instance.calculateSubtotal();
@@ -186,7 +187,7 @@ public class OrderDetailTest {
     @Test
     public void testCalculateDiscount() {
         System.out.println("calculateDiscount");
-        Product product = new Product(2, "Mochaccino", 3.00f, 1.00f);
+        Product product = new OtherProduct(2, "Mochaccino", 3.00f, 1.00f);
         OrderDetail instance = new OrderDetail(product, 2, 10.0f);
         float expResult = 0.60f;
         float result = (float) instance.calculateDiscount();
@@ -196,7 +197,7 @@ public class OrderDetailTest {
     @Test
     public void testCalculateTotal() {
         System.out.println("calculateTotal");
-        Product product = new Product(3, "Café Cappuccino", 2.50f, 0.90f);
+        Product product = new OtherProduct(3, "Café Cappuccino", 2.50f, 0.90f) {};
         OrderDetail instance = new OrderDetail(product, 2, 20.0f);
         float expResult = 4.00f;
         float result = (float) instance.calculateTotal();

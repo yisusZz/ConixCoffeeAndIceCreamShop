@@ -118,7 +118,7 @@ public class ProductMenu {
                 break;
 
             default:
-                product = new Product(id, name, price, cost);
+                product = new OtherProduct(id, name, price, cost);
                 break;
         }
 

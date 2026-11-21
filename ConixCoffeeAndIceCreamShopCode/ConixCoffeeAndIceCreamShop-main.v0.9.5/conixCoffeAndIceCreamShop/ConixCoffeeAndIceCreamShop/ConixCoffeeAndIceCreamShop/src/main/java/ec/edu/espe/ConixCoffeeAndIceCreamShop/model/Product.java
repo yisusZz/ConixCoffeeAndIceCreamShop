@@ -8,7 +8,7 @@ package ec.edu.espe.ConixCoffeeAndIceCreamShop.model;
  *
  * @author Isabel Espinosa, EsFuGa
  */
-public class Product {
+public abstract class Product {
 
     private int id;
     private String name;
@@ -63,9 +63,7 @@ public class Product {
                 + ", sellingPrice=" + sellingPrice + '}';
     }
 
-    public float calculateFinalPrice() {
-        return sellingPrice;
-    }
+    public abstract float calculateFinalPrice();
 
     public float calculateProfit() {
         return sellingPrice - cost;

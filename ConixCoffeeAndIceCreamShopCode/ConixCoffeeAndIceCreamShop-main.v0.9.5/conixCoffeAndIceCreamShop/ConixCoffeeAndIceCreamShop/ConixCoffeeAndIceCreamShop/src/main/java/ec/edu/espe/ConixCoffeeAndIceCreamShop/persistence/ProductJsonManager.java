@@ -10,6 +10,7 @@ import com.google.gson.JsonParser;
 
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Beverage;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.IceCream;
+import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.OtherProduct;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Product;
 
 import java.io.IOException;
@@ -172,7 +173,7 @@ public class ProductJsonManager {
                         break;
 
                     case "PRODUCT":
-                        products.add(new Product(
+                        products.add(new OtherProduct(
                                 id, name, sellingPrice, cost));
                         break;
 

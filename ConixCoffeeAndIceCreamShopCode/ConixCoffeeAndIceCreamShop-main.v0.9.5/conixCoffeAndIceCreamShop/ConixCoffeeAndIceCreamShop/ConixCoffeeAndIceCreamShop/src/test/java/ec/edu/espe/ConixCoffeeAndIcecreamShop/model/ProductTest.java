@@ -4,13 +4,15 @@
  */
 package ec.edu.espe.ConixCoffeeAndIcecreamShop.model;
 
-import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Product;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.OtherProduct;
+import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Product; // si también lo necesitas
+
 
 /**
  *
@@ -43,12 +45,11 @@ public class ProductTest {
     @Test
     public void testGetName() {
         System.out.println("getName");
-        Product instance = new Product();
+        Product instance = new OtherProduct(1, "Producto de prueba", 2.0f, 1.0f);        
         String expResult = "";
         String result = instance.getName();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -58,10 +59,10 @@ public class ProductTest {
     public void testSetName() {
         System.out.println("setName");
         String name = "";
-        Product instance = new Product();
+        Product instance = new OtherProduct(1, "", 0.0f, 0.0f);
         instance.setName(name);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     
     }
 
     /**
@@ -70,7 +71,7 @@ public class ProductTest {
     @Test
     public void testGetSellingPrice() {
         System.out.println("getSellingPrice");
-        Product instance = new Product();
+        Product instance = new OtherProduct(1, "", 0.0f, 0.0f);
         float expResult = 0.0F;
         float result = instance.getSellingPrice();
         assertEquals(expResult, result, 0);
@@ -85,7 +86,7 @@ public class ProductTest {
     public void testSetSellingPrice() {
         System.out.println("setSellingPrice");
         float sellingPrice = 0.0F;
-        Product instance = new Product();
+        Product instance = new OtherProduct(1, "", 0.0f, 0.0f);
         instance.setSellingPrice(sellingPrice);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -97,7 +98,7 @@ public class ProductTest {
     @Test
     public void testGetId() {
         System.out.println("getId");
-        Product instance = new Product();
+        Product instance = new OtherProduct(1, "", 0.0f, 0.0f);
         int expResult = 0;
         int result = instance.getId();
         assertEquals(expResult, result);
@@ -112,7 +113,7 @@ public class ProductTest {
     public void testSetId() {
         System.out.println("setId");
         int id = 0;
-        Product instance = new Product();
+        Product instance = new OtherProduct(1, "", 0.0f, 0.0f);
         instance.setId(id);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -124,7 +125,7 @@ public class ProductTest {
     @Test
     public void testGetCost() {
         System.out.println("getCost");
-        Product instance = new Product();
+        Product instance = new OtherProduct(1, "", 0.0f, 0.0f);
         float expResult = 0.0F;
         float result = instance.getCost();
         assertEquals(expResult, result, 0);
@@ -139,7 +140,7 @@ public class ProductTest {
     public void testSetCost() {
         System.out.println("setCost");
         float cost = 0.0F;
-        Product instance = new Product();
+        Product instance = new OtherProduct(1, "", 0.0f, 0.0f);
         instance.setCost(cost);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -151,7 +152,7 @@ public class ProductTest {
     @Test
     public void testToString() {
         System.out.println("toString");
-        Product instance = new Product();
+        Product instance = new OtherProduct(1, "", 0.0f, 0.0f);
         String expResult = "";
         String result = instance.toString();
         assertEquals(expResult, result);
@@ -163,7 +164,7 @@ public class ProductTest {
      @Test
     public void testCalculateFinalPrice() {
         System.out.println("calculateFinalPrice");
-        Product instance = new Product(1, "Salsa Extra", 0.40f, 0.10f);
+        Product instance = new OtherProduct(1, "Salsa Extra", 0.40f, 0.10f);
         float expResult = 0.40f;
         float result = instance.calculateFinalPrice();
         assertEquals(expResult, result, 0.001f);
@@ -172,7 +173,7 @@ public class ProductTest {
     @Test
     public void testCalculateProfit() {
         System.out.println("calculateProfit");
-        Product instance = new Product(2, "Topping Chips", 2.50f, 1.00f);
+        Product instance = new OtherProduct(2, "Topping Chips", 2.50f, 1.00f);
         float expResult = 1.50f;
         float result = instance.calculateProfit();
         assertEquals(expResult, result, 0.001f);
@@ -181,7 +182,7 @@ public class ProductTest {
     @Test
     public void testCalculateProfitMargin() {
         System.out.println("calculateProfitMargin");
-        Product instance = new Product(3, "Cono Extra", 2.00f, 1.00f);
+        Product instance = new OtherProduct(3, "Cono Extra", 2.00f, 1.00f);
         float expResult = 50.0f;
         float result = instance.calculateProfitMargin();
         assertEquals(expResult, result, 0.001f);

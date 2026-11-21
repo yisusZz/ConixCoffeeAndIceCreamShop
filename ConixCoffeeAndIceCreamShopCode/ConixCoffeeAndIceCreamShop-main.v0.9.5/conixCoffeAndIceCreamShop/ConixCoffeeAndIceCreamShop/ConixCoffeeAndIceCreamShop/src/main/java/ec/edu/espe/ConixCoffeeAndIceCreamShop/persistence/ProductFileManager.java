@@ -4,6 +4,7 @@ package ec.edu.espe.ConixCoffeeAndIceCreamShop.persistence;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Product;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.IceCream;
 import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.Beverage;
+import ec.edu.espe.ConixCoffeeAndIceCreamShop.model.OtherProduct;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -135,13 +136,15 @@ public class ProductFileManager {
                             break;
 
                         case "PRODUCT":
-                            Product product = new Product();
-                            product.setId(id);
-                            product.setName(name);
-                            product.setSellingPrice(sellingPrice);
-                            product.setCost(cost);
-                            products.add(product);
-                            break;
+                            Product product = new OtherProduct(
+                                id,
+                                name,
+                                sellingPrice,
+                                cost
+                            );
+
+                        products.add(product);
+                        break;
 
                         default:
                             System.out.println(
