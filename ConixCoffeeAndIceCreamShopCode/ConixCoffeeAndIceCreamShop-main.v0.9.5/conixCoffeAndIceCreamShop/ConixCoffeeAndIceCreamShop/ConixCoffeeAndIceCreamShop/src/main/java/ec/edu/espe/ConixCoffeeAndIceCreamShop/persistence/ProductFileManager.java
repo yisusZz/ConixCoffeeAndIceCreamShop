@@ -136,15 +136,12 @@ public class ProductFileManager {
                             break;
 
                         case "PRODUCT":
-                            Product product = new OtherProduct(
-                                id,
-                                name,
-                                sellingPrice,
-                                cost
-                            );
+                            products.add(new OtherProduct(
+                            id, name, sellingPrice, cost
+                            ));
+                            break;
 
-                        products.add(product);
-                        break;
+                      
 
                         default:
                             System.out.println(
